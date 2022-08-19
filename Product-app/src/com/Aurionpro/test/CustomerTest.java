@@ -1,0 +1,38 @@
+package com.Aurionpro.test;
+
+import com.Aurionpro.model.Customer;
+import com.Aurionpro.model.LineItem;
+import com.Aurionpro.model.Order;
+import com.Aurionpro.model.Product;
+
+public class CustomerTest {
+
+	public static void main(String[] args) {
+		Product pro1=new Product(100, "Camera", 1000, 5);
+		Product pro2=new Product(101, "Mobile", 2000, 5);
+		System.out.println(pro1);
+		System.out.println(pro2);
+		
+		LineItem l1=new LineItem(200, 2, pro1);
+		LineItem l2=new LineItem(300, 2, pro2);
+		System.out.println(l1);
+		System.out.println(l2);
+		System.out.println(l1.calculateLineItemcost());
+		
+		Order or=new Order(400, "1 Jan");
+		or.addLineItem(l1);
+		or.addLineItem(l2);
+		System.out.println(or);
+		
+		
+		Customer c1=new Customer(500, "Karan");
+		c1.addOrder(or);
+		System.out.println(or.calculateOrderPrice());
+		System.out.println(or.getId());
+		System.out.println(or.itemsCount());
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.Aurionpro.model;
+
+public class RemoteControl {
+	ICommand command;
+
+	public RemoteControl() {
+	}
+
+	public void setCommand(ICommand command) {
+		command = command;
+	}
+
+	public void buttonWasPressed() {
+		command.execute();
+	}
+
+}

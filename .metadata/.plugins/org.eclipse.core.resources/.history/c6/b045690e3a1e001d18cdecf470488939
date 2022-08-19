@@ -1,0 +1,15 @@
+package com.Aurionpro.model;
+
+public class StereoOnwithCD implements ICommand {
+	Stereo stereo;
+
+	public StereoOnwithCD(Stereo stereo) {
+		this.stereo = stereo;
+	}
+
+	public void execute() {
+		stereo.on();
+		stereo.setDVD();
+	}
+
+}
